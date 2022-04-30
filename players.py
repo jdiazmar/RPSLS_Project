@@ -4,8 +4,8 @@ from select import select
 
 
 class Players:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
+        self.gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
     def view_player(self):
         print(f"You chose {self.name}!")
@@ -17,7 +17,11 @@ class Players:
 
 class HumanPlayer:
     def __init__(self) -> None:
-        super().__init__(name)
+        super().__init__(self)
+        self.gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
+
+    def choose_gesture(self):
+        pass
 
     def view_player(self):
         print(f"You chose {self.name}!")
@@ -30,6 +34,7 @@ class HumanPlayer:
 class ComputerPlayer:
     def __init__(self) -> None:
         super().__init__(name)
+        self.gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
     def view_player(self):
         print(f"You chose {self.name}!")
