@@ -27,7 +27,14 @@ class Game:
         print("Welcome to Rock, Paper, Scissors, Lizard, & Spock!")
         print("")
         print("Here are the rules for RPSLS: ")
-        print("Rock crushes Scissors\Scissors cuts Paper\Paper covers Rock\Rock crushes Lizard\Lizard poisons Spock\Spock smashes Scissors\Scissors decapitates Lizard\Lizard eats Paper!")
+        print("Rock crushes Scissors!")
+        print("Scissors cuts Paper!")
+        print("Paper covers Rock!")
+        print("Rock crushes Lizard!")
+        print("Lizard poisons Spock!")
+        print("Spock smashes Scissors!")
+        print("Scissors decapitates Lizard!")
+        print("Lizard eats Paper!")
         print("")
         print("Let the games BEGIN!")
 
@@ -39,7 +46,8 @@ class Game:
                 print("Please enter '1' or '2' ")
         if players_choice == '1':
             return True
-        else: return False 
+        else: 
+            return False 
 
     def who_won_gestures(self, gesture_one, gesture_two):
         if gesture_one == gesture_two:
