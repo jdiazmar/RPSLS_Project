@@ -11,7 +11,7 @@ class Game:
 
     def run_game(self) -> None:
         self.display_welcome()
-        single_player = self.single_player_or_naw()
+        single_player = self.single_play_game()
         if single_player == True:
             self.player_two = AI()
         while self.player_one.score < 2 and self.player_two.score < 2:
