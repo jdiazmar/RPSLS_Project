@@ -1,5 +1,6 @@
 from players import Players
 import random
+
 class AI(Players):
     def __init__(self) -> None:
         super().__init__()

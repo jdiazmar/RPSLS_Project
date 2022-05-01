@@ -1,4 +1,7 @@
 from human import Human
+from ai import AI
+from players import Players
+player = Players()
 
 
 class Game:
@@ -7,7 +10,7 @@ class Game:
         self.player_two = Human()
 
     def run_game(self) -> None:
-        pass
+        self.display_welcome()
 
     def display_welcome(self):
         print("Welcome to Rock, Paper, Scissors, Lizard, & Spock!")
@@ -26,5 +29,15 @@ class Game:
             return True
         else: return False 
 
-    def display_winner(self):
-        pass 
+    def who_won_gestures(self, gesture_one, gesture_two):
+        if gesture_one == gesture_two:
+            return "It's a DRAW! Let's PLAY AGAIN!"
+        
+
+        
+
+    def display_winner(self, player_one_scoresheet, player_two_scoresheet):
+        if player_one_scoresheet > player_two_scoresheet:
+            print('Player One has won the game of RPSLS!!!')
+        else:
+            print('Player Two has won the game of RPSLS!!!')
