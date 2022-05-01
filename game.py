@@ -53,7 +53,7 @@ class Game:
         if gesture_one == gesture_two:
             return "It's a DRAW! Let's PLAY AGAIN!"
 
-        gestures = {'Rock' < ['Scissors' or 'Lizard'], 'Paper' < ['Rock' or 'Spock'], 'Scissors' < ['Paper' or 'Lizard'], 'Lizard' < ['Spock' or 'Paper'], 'Spock' < ['Scissors' or 'Rock']}
+        gestures = {'Rock' < ['Scissors', 'Lizard'], 'Paper' < ['Rock', 'Spock'], 'Scissors' < ['Paper', 'Lizard'], 'Lizard' < ['Spock', 'Paper'], 'Spock' < ['Scissors', 'Rock']}
 
         results = gestures[gesture_one].count(gesture_two)
 
