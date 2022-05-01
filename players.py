@@ -1,6 +1,3 @@
-import random
-
-
 class Players:
     def __init__(self):
         self.gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']

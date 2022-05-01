@@ -3,7 +3,7 @@ from players import Players
 class Human(Players):
     def __init__(self) -> None:
         super().__init__(self)
-        self.gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
+        
 
     def choose_gesture(self):
         print('')
