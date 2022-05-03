@@ -1,4 +1,3 @@
-
 from human import Human
 from ai import AI
 from players import Players
@@ -6,11 +5,11 @@ player = Players()
 
 
 class Game:
-    def __init__(self) -> None:
+    def __init__(self):
         self.player_one = Human()
         self.player_two = Human()
 
-    def run_game(self) -> None:
+    def run_game(self):
         self.display_welcome()
         single_player = self.single_play_game()
         if single_player == True:
@@ -53,6 +52,8 @@ class Game:
     def who_won_gestures(self, gesture_one, gesture_two):
         if gesture_one == gesture_two:
             return "It's a DRAW! Let's PLAY AGAIN!"
+
+        gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
         if self.player_one.choose_gesture == "Rock" and self.player_two.choose_gesture == "Scissors":
             print('Rock crushs Scissors!')
@@ -116,7 +117,7 @@ class Game:
             return results == 1
 
         
-        results = gesture_one or gesture_two
+        results = results
 
         if results == 1:
             return 'Player One has won this round!'
