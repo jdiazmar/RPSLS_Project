@@ -120,9 +120,9 @@ class Game:
         results = 0 or 1
 
         if results == 1:
-            return 'Player One has won this round!'
+            return 'Player One has won'
         else:
-            return 'Player Two has won this round!'
+            return 'Player Two has won'
         
 
         
