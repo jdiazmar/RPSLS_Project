@@ -117,7 +117,7 @@ class Game:
             return results == 1
 
         
-        results = results
+        results = 0 or 1
 
         if results == 1:
             return 'Player One has won this round!'
