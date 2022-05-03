@@ -1,3 +1,5 @@
+from lib2to3.pytree import _Results
+from unittest import result
 from human import Human
 from ai import AI
 from players import Players
@@ -54,26 +56,68 @@ class Game:
             return "It's a DRAW! Let's PLAY AGAIN!"
 
         if self.player_one.gestures == "Rock" and self.player_two.gestures == "Scissors":
-            return 'Rock crushs Scissors!'
-        elif self.player_one.gestures == "Scissors" and self.player_two.gestures == "Paper":
-            return "Scissors cut Paper!"
-        elif self.player_one.gestures == "Paper" and self.player_two.gestures == "Rock":
-            return "Paper covers Rock!"
+            print('Rock crushs Scissors!')
+            return self.player_one.score == +1
+        elif self.player_one.gestures == "Rock" and self.player_two.gestures == "Paper":
+             print('Paper covers Rock!')
+             return self.player_two.score == +1
         elif self.player_one.gestures == "Rock" and self.player_two.gestures == "Lizard":
-            return "Rock crushes Lizard!"
-        elif self.player_one.gestures == "Lizard" and self.player_two.gestures == "Spock":
-            return "Lizard poisons Spock!"
-        elif self.player_one.gestures == "Spock" and self.player_two.gestures == "Scissors":
-            return "Spock smashes Scissors!"
-        elif self.player_one.gestures == "Lizard" and self.player_two.gestures == "Paper":
-            return "Lizard eats Paper!"
+             print('Rock crushes Lizard!')
+             return self.player_one.score == +1
+        elif self.player_one.gestures == "Rock" and self.player_two.gestures == "Spock":
+             print('Spock vaporizes Rock!')
+             return self.player_two.score == +1
+        elif self.player_one.gestures == "Scissors" and self.player_two.gestures == "Rock":
+            print('Rock crushes Scissors')
+            return self.player_two.score ==+1
+        elif self.player_one.gestures == "Scissors" and self.player_two.gestures == "Spock":
+            print('Spock smashes Scissors')
+            return self.player_two.score == +1
+        elif self.player_one.gestures == "Scissors" and self.player_two.gestures == "Lizard":
+            print('Scissors decapitates Lizard')
+            return self.player_one.score == +1
+        elif self.player_one.gestures == "Scissors" and self.player_two.gestures == "Paper":
+            print("Scissors cut Paper!")
+            return self.player_one.score == +1
+        elif self.player_one.gestures == "Paper" and self.player_two.gestures == "Rock":
+            print("Paper covers Rock!")
+            return self.player_one.score == +1
+        elif self.player_one.gestures == "Paper" and self.player_two.gestures == "Scissors":
+            print('Scissors cuts Paper')
+            return self.player_two.score == +1
+        elif self.player_one.gestures == "Paper" and self.player_two.gestures == "Lizard":
+            print('Lizard eats Paper')
+            return self.player_two.score == +1
         elif self.player_one.gestures == "Paper" and self.player_two.gestures == "Spock":
-            return "Paper disproves Spock!"
+            print("Paper disproves Spock!")
+            return self.player_one.score == +1
+        elif self.player_one.gestures == "Lizard" and self.player_two.gestures == "Spock":
+            print("Lizard poisons Spock!")
+            return self.player_one.score == +1
+        elif self.player_one.gestures == "Lizard" and self.player_two.gestures == "Rock":
+            print('Rock crushes Lizard')
+            return self.player_two.score == +1
+        elif self.player_one.gestures == "Lizard" and self.player_two.gestures == "Scissors":
+            print('Scissors decapitates Lizard')
+            return self.player_two.score == +1
+        elif self.player_one.gestures == "Lizard" and self.player_two.gestures == "Paper":
+            print("Lizard eats Paper!")
+            return self.player_one.score == +1
+        elif self.player_one.gestures == "Spock" and self.player_two.gestures == "Scissors":
+            print("Spock smashes Scissors!")
+            return self.player_one.score == +1
+        elif self.player_one.gestures == "Spock" and self.player_two.gestures == "Paper":
+            print('Paper disproves Spock')
+            return self.player_two.score == +1
+        elif self.player_one.gestures == "Spock" and self.player_two.gestures == "Lizard":
+            print('Lizard poisons Spock')
+            return self.player_two.score == +1
         elif self.player_one.gestures == "Spock" and self.player_two.gestures == "Rock":
-            return "Spock vaporizes Rock!"
-        
+            print("Spock vaporizes Rock!")
+            return self.player_one.score == +1
 
-        results = (Players).gestures[gesture_one].count(gesture_two)
+        
+        results = Players.gestures[gesture_one].count(gesture_two)
 
         if results == 1:
             return 'Player One has won this round!'
