@@ -53,9 +53,27 @@ class Game:
         if gesture_one == gesture_two:
             return "It's a DRAW! Let's PLAY AGAIN!"
 
-        gestures = {'Rock' < ['Scissors', 'Lizard'], 'Paper' < ['Rock', 'Spock'], 'Scissors' < ['Paper', 'Lizard'], 'Lizard' < ['Spock', 'Paper'], 'Spock' < ['Scissors', 'Rock']}
+        if self.player_one.gestures == "Rock" and self.player_two.gestures == "Scissors":
+            return 'Rock crushs Scissors!'
+        elif self.player_one.gestures == "Scissors" and self.player_two.gestures == "Paper":
+            return "Scissors cut Paper!"
+        elif self.player_one.gestures == "Paper" and self.player_two.gestures == "Rock":
+            return "Paper covers Rock!"
+        elif self.player_one.gestures == "Rock" and self.player_two.gestures == "Lizard":
+            return "Rock crushes Lizard!"
+        elif self.player_one.gestures == "Lizard" and self.player_two.gestures == "Spock":
+            return "Lizard poisons Spock!"
+        elif self.player_one.gestures == "Spock" and self.player_two.gestures == "Scissors":
+            return "Spock smashes Scissors!"
+        elif self.player_one.gestures == "Lizard" and self.player_two.gestures == "Paper":
+            return "Lizard eats Paper!"
+        elif self.player_one.gestures == "Paper" and self.player_two.gestures == "Spock":
+            return "Paper disproves Spock!"
+        elif self.player_one.gestures == "Spock" and self.player_two.gestures == "Rock":
+            return "Spock vaporizes Rock!"
+        
 
-        results = gestures[gesture_one].count(gesture_two)
+        results = (Players).gestures[gesture_one].count(gesture_two)
 
         if results == 1:
             return 'Player One has won this round!'
